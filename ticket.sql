@@ -8,7 +8,9 @@ CREATE TABLE `ticket` (
 	`ticketcost` float GENERATED ALWAYS AS (tprice + (tprice * ttax)) STORED,
 	`tbookingstatus` varchar(20),
 	`coachclass` varchar(10),
-	PRIMARY KEY (`pnrnumber`)
+	PRIMARY KEY (`pnrnumber`),
+    FOREIGN KEY (`trainid`) REFERENCES train (`trainid`),
+	FOREIGN KEY (`pid`) REFERENCES passenger (`pid`)
 );
 
 ALTER TABLE ticket auto_increment=1883332598;
