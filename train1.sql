@@ -2,7 +2,7 @@ create table `train` (
 	`trainid` INT NOT NULL auto_increment,
     `trainname` VARCHAR(255),
     `activedays` VARCHAR(255),
-    `locopilot` VARCHAR(255),
+    `locopilotID` VARCHAR(255),
     `originstation` VARCHAR(255),
     `destinationstation` VARCHAR(255),
     `pickupstation` VARCHAR(255),
