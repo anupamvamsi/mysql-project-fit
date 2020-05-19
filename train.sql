@@ -1,4 +1,4 @@
-# CREATING TABLE 'TRAIN' WITH PRIMARY KEY 'TRAINID'
+-- CREATING TABLE 'TRAIN' WITH PRIMARY KEY 'TRAINID'
 	CREATE TABLE `train` (
 		`trainid` INT NOT NULL AUTO_INCREMENT,
 		`trainname` VARCHAR(255),
@@ -11,10 +11,10 @@
 		PRIMARY KEY (`trainid`)	
 	);
 
-# STARTING 'TRAINID' VALUE WITH THE VALUE '1023'
+-- STARTING 'TRAINID' VALUE WITH THE VALUE '1023'
 	ALTER TABLE train AUTO_INCREMENT = 1023;
 
-# INSERTING VALUES INTO 'TRAIN'
+-- INSERTING VALUES INTO 'TRAIN'
 	INSERT INTO `irctc`.`train`(`trainname`, `activedays`, `locopilotID`, `originstation`, `destinationstation`, `pickupstation`, `journeytime`)
 	VALUES
 		('Amritha Express', 'Daily', 100342, ' Thiruvananthapuram Central', 'Palakkad Town', 'Kollam, Kottayam, Ernakulam, Aluva, Thrissur, Palakkad, Dindigul', '00:15:45'), 
@@ -28,5 +28,5 @@
 		('Indore - Jammu Tawi Weekly Superfast Express ', 'Mon, Wed', 100350, 'Indore', 'Jammu', 'Kota, Panipat, Ludhiana', '00:25:30'), 
 		('Jaipur Mysore Superfast Express', 'Thurs, Sat', 100351, 'Jaipur', 'Mysore', 'Kota, Hyderabad, Bangalore City', '00:44:00');
 
-# VIEWING THE FINAL TABLE 'TRAIN'
+-- VIEWING THE FINAL TABLE 'TRAIN'
 	SELECT * FROM train;

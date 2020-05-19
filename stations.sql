@@ -1,4 +1,4 @@
-# CREATING TABLE 'STATIONS' WITH PRIMARY KEY 'SID' (STATION ID)
+-- CREATING TABLE 'STATIONS' WITH PRIMARY KEY 'SID' (STATION ID)
 	CREATE TABLE stations (
 		sid INT NOT NULL AUTO_INCREMENT, 
 		stationname VARCHAR(30), 
@@ -11,7 +11,7 @@
 		PRIMARY KEY (sid)
 	);
 
-# INSERTING VALUES INTO 'STATIONS'
+-- INSERTING VALUES INTO 'STATIONS'
 	INSERT INTO stations(stationname, numberofplatforms, numberoffoodstalls, numberofwaitingrooms, internet, numberofemp, arrivingtrains)
 		VALUES
 		('KSR Bengaluru', 12, 39, 10, 'YES', 25, '1025, 1027, 1032'), 
@@ -31,5 +31,5 @@
 		('Mysore', 5, 14, 3, 'YES', 11, '1025, 1032'), 
 		('Jaipur', 12, 39, 6, 'YES', 16, '1028, 1030, 1031, 1032');
 
-# VIEWING THE FINAL TABLE 'STATIONS'
+-- VIEWING THE FINAL TABLE 'STATIONS'
 	SELECT * FROM stations;

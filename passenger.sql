@@ -1,4 +1,4 @@
-# CREATING TABLE 'PASSENGER' WITH PRIMARY KEY 'PID'
+-- CREATING TABLE 'PASSENGER' WITH PRIMARY KEY 'PID' (PASSENGER ID)
 	CREATE TABLE passenger (
 		pid INT NOT NULL AUTO_INCREMENT, 
 		pfirstname VARCHAR(30), 
@@ -11,13 +11,13 @@
 		PRIMARY KEY (pid)
 	);
 
-# STARTING 'PID' VALUE WITH THE VALUE '10100'
+-- STARTING 'PID' VALUE WITH THE VALUE '10100'
 	ALTER TABLE passenger AUTO_INCREMENT = 10100;
 
-# INSERTING VALUES INTO 'PASSENGER'
+-- INSERTING VALUES INTO 'PASSENGER'
 	INSERT INTO passenger(pfirstname,  plastname,  p_age,  pgender,  pemail,  pmobilenumber,  paddress) 
 		VALUES  
-		# Done for 20 different iterations
+		-- Done for 20 different iterations
 		('Jacob', 'Stevonson', 42, 'Male', 'jacob@gmail.com', '8941372561', 'Pondicherry'),  
 		('Mohan', 'Dadvani', 60, 'Male', 'mohan@gmail.com', '9217334768', 'Delhi'), 
 		('Harshitha', 'Gowda', 23, 'Female', 'harshitha@gmail.com', '7619842536', 'Bangalore'), 
@@ -39,5 +39,5 @@
 		('Simran', 'Hegde', 43, 'Female', 'simran@gmail.com', '9561574313', 'Mangalore'), 
 		('Akarsh', 'Bhatia', 36, 'Male', 'akarsh@gmail.com', '9611365168', 'Amaravati');
 
-# VIEWING THE FINAL TABLE 'PASSENGER'
+-- VIEWING THE FINAL TABLE 'PASSENGER'
 	SELECT * FROM passenger;

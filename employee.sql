@@ -1,4 +1,4 @@
-# CREATING TABLE 'EMPLOYEE' WITH PRIMARY KEY 'EID'
+-- CREATING TABLE 'EMPLOYEE' WITH PRIMARY KEY 'EID'
 	CREATE TABLE `employee` (
 		`eid` INT NOT NULL auto_increment, 
 		`ename` VARCHAR(255), 
@@ -16,17 +16,17 @@
 
 SET SQL_SAFE_UPDATES = 0;
 
-# ADDING A COLUMN TO SET 'TRAINID' AS FOREIGN KEY
+-- ADDING A COLUMN TO SET 'TRAINID' AS FOREIGN KEY
 	ALTER TABLE employee ADD COLUMN trainid INT NULL;
 	UPDATE employee SET trainid = 1023;
 
-# ADDING 'TRAINID' AS FOREIGN KEY
+-- ADDING 'TRAINID' AS FOREIGN KEY
 	ALTER TABLE employee ADD FOREIGN KEY (trainid) REFERENCES train (trainid);
 
-# STARTING 'EID' VALUE WITH THE VALUE '100234'
+-- STARTING 'EID' VALUE WITH THE VALUE '100234'
 	ALTER TABLE employee AUTO_INCREMENT = 100234;
 
-# INSERTING 'ENGINEER' VALUES INTO 'EMPLOYEE'
+-- INSERTING 'ENGINEER' VALUES INTO 'EMPLOYEE'
 	INSERT INTO `irctc`.`employee` (`ename`, `epostionheld`, `eage`, `egender`, `edaysofduty`, `ebasesalary`, `eshift`, `eyearsofservice`, `eincentives`, `trainid`)
 		VALUES 
 		('Rohini', 'Engineer', '32', 'Female', 'Mon, Tue, Wed', '16000', '8', '5', '500', '1023'), 
@@ -49,7 +49,7 @@ SET SQL_SAFE_UPDATES = 0;
  
 ALTER TABLE employee AUTO_INCREMENT = 100343;
 
-# INSERTING 'LOCOPILOT' VALUES INTO 'EMPLOYEE'
+-- INSERTING 'LOCOPILOT' VALUES INTO 'EMPLOYEE'
 	INSERT INTO `irctc`.`employee` (`Ename`, `Epostionheld`, `Eage`, `Egender`, `Edaysofduty`, `Ebasesalary`, `Eshift`, `Eyearsofservice`, `Eincentives`, `trainid`)
 		VALUES
 		( 'Rony', 'Locopilot', '27', 'Male', 'Mon, Tue, Wed, Thur, Fri, Sat, Sun', '10000', '10', '5', '500', '1023'), 
@@ -65,7 +65,7 @@ ALTER TABLE employee AUTO_INCREMENT = 100343;
 	 
 ALTER TABLE employee AUTO_INCREMENT = 100567;
 
-# INSERTING 'TTE' VALUES INTO 'EMPLOYEE'
+-- INSERTING 'TTE' VALUES INTO 'EMPLOYEE'
 	INSERT INTO `irctc`.`employee` (`Ename`, `Epostionheld`, `Eage`, `Egender`, `Edaysofduty`, `Ebasesalary`, `Eshift`, `Eyearsofservice`, `Eincentives`, `trainid`)
 		VALUES 
 		('Govind', 'TTE', '28', 'Male', 'Mon, Tue, Wed, Thur, Fri', '16000', '10', '4', '400', '1023'), 
@@ -81,7 +81,7 @@ ALTER TABLE employee AUTO_INCREMENT = 100567;
 
 ALTER TABLE employee AUTO_INCREMENT = 100768;
 
-# INSERTING 'CLEANER' VALUES INTO 'EMPLOYEE'
+-- INSERTING 'CLEANER' VALUES INTO 'EMPLOYEE'
 	INSERT INTO `irctc`.`employee` (`Ename`, `Epostionheld`, `Eage`, `Egender`, `Edaysofduty`, `Ebasesalary`, `Eshift`, `Eyearsofservice`, `Eincentives`, `trainid`)
 	VALUES 
 		('Dalhousie', 'Cleaner', '30', 'Male', 'Mon, Tue, Wed, Thurs, Fri, Sat, Sun', '10000', '10', '5', '500', '1023'), 
@@ -95,5 +95,5 @@ ALTER TABLE employee AUTO_INCREMENT = 100768;
 		('Amar', 'Cleaner', '45', 'Male', 'Mon, Tue, Wed, Thurs, Fri, Sat, Sun', '10000', '10', '23', '6000', '1031'), 
 		('Purush', 'Cleaner', '50', 'Male', 'Mon, Tue, Wed, Thurs, Fri, Sat, Sun', '10000', '10', '25', '8000', '1032');
 
-# VIEWING THE FINAL TABLE 'EMPLOYEE'
+-- VIEWING THE FINAL TABLE 'EMPLOYEE'
 	SELECT * FROM employee;

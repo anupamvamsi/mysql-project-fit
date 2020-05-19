@@ -1,4 +1,4 @@
-# CREATING TABLE 'CATERER' WITH PRIMARY KEY 'SHOPID'
+-- CREATING TABLE 'CATERER' WITH PRIMARY KEY 'SHOPID'
 	CREATE TABLE `caterer` (
 		`shopid` INT NOT NULL AUTO_INCREMENT,
 		`shopname` VARCHAR(45) NOT NULL,
@@ -10,24 +10,24 @@
 
 SET SQL_SAFE_UPDATES = 0;
 
-# ADDING A COLUMN TO SET 'SID' AS FOREIGN KEY
+-- ADDING A COLUMN TO SET 'SID' AS FOREIGN KEY
 	ALTER TABLE caterer ADD COLUMN sid INT NULL;
 	UPDATE caterer SET sid = 1;
 
-# ADDING 'SID' AS FOREIGN KEY
+-- ADDING 'SID' AS FOREIGN KEY
 	ALTER TABLE caterer ADD FOREIGN KEY (sid) REFERENCES stations (sid);
 
-# ADDING A COLUMN TO SET 'PID' AS FOREIGN KEY
+-- ADDING A COLUMN TO SET 'PID' AS FOREIGN KEY
 	ALTER TABLE caterer ADD COLUMN pid INT NULL;
 	UPDATE caterer SET pid = 10100;
 
-# ADDING 'PID' AS FOREIGN KEY
+-- ADDING 'PID' AS FOREIGN KEY
 	ALTER TABLE caterer ADD FOREIGN KEY (pid) REFERENCES passenger (pid);
 
-# STARTING 'SHOPID' VALUE WITH THE VALUE '6588832'
+-- STARTING 'SHOPID' VALUE WITH THE VALUE '6588832'
 	ALTER TABLE caterer AUTO_INCREMENT = 6588832;
 
-# INSERTING VALUES INTO 'CATERER'
+-- INSERTING VALUES INTO 'CATERER'
 	INSERT INTO `irctc`.`caterer` (`shopname`, `menu`, `billnumber`, `amount`, `sid`, `pid`) 
 		VALUES
 		('Raju Pan Masala', 'Sweet Paan, Cigarettes, Cheni Kheni, Biscuits, Chakli, Kaccha Mango Bite', '24568732', '300', '1', '10105'),
@@ -41,5 +41,5 @@ SET SQL_SAFE_UPDATES = 0;
 		('Just Bake', 'Brownie, Choco Lava cake, Cheese cake, Pastries, Cookies', '24568740', '352', '8', '10111'),
 		('Udupi Upahar', 'Rava idli, Upma, Coffee, Tea, Green Tea, Veg Meals, Onion less Biryani', '24568741', '294', '9', '10117');
 
-# VIEWING THE FINAL TABLE 'CATERER'        
+-- VIEWING THE FINAL TABLE 'CATERER'        
 	SELECT * FROM caterer;
