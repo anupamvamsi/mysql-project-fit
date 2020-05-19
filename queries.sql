@@ -1,15 +1,15 @@
 /* File with queries */
 
 -- 1 Extracting details of passengers from 'Ticket' table:
-	SELECT t.pnrnumber, concat(p.pfirstname, ' ', p.plastname) AS PassengerName, 
+	SELECT t.pnrnumber, CONCAT(p.pfirstname, ' ', p.plastname) AS PassengerName, 
 			p.p_age, p.pgender, tr.trainname, t.dateofjourney
-	FROM passenger p join ticket t join train tr
-	WHERE p.pid = t.pid and t.trainid = tr.trainid;
+	FROM passenger p JOIN ticket t JOIN train tr
+	WHERE p.pid = t.pid AND t.trainid = tr.trainid;
 
 -- 2 Extracting details of passengers who've ordered from caterers
-	select ti.pnrnumber, c.pid, c.menu, t.trainid 
-	from train t join ticket ti join caterer c 
-	where ti.pid = c.pid and ti.trainid=t.trainid; 
+	SELECT ti.pnrnumber, c.pid, c.menu, t.trainid 
+	FROM train t JOIN ticket ti JOIN caterer c 
+	WHERE ti.pid = c.pid AND ti.trainid=t.trainid; 
 
 -- 3 Extracting details of employees on train 1023
 	SELECT trainid, eid, ename,epostionheld, edaysofduty, eshift
@@ -35,7 +35,12 @@
 		WHERE ticket.pid = passenger.pid) AS NumberOfTickets
 	FROM passenger;
     
--- 7 
+-- 7 Extracting station name with internet connectivity with food stalls
+	SELECT s.arrivingtrains, s.stationname AS stationswithinternet, c.shopname AS available_shops
+	FROM stations s JOIN caterer c
+	WHERE s.internet='YES' AND c.sid=s.sid;
 
--- 8 
-
+-- 8 Passengers above 40 travelling in a train and have bought food
+	SELECT DISTINCTROW(c.billnumber), CONCAT(pfirstname, ' ', plastname) AS PassengerName, p.pid, p.p_age, c.amount
+	FROM passenger p JOIN caterer c
+	WHERE p.p_age > 40 AND p.pid=c.pid;
