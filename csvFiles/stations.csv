@@ -1,0 +1,17 @@
+sid,stationname,numberofplatforms,numberoffoodstalls,numberofwaitingrooms,internet,numberofemp,arrivingtrains
+1,KSR Bengaluru,12,39,10,YES,25,"102,510,271,032"
+2,Margao Station,4,7,2,NO,8,1029
+3,Bandra,8,15,4,YES,11,"10,241,032"
+4,Ernakulam,10,30,10,YES,18,"10,231,027"
+5,Kota,2,6,0,NO,10,"10,321,031"
+6,Kollam,5,11,3,NO,12,"10,231,027"
+7,Mumbai,12,50,13,YES,35,"10,241,026,102,810,200,000"
+8,Thrissur,2,6,0,NO,6,1023
+9,Hyderabad,9,21,6,YES,17,"10,301,032"
+10,Surat,2,0,0,NO,6,"10,281,031"
+11,Pune,7,17,5,YES,15,"10,261,030"
+12,Indore,8,20,4,YES,21,"103,110,321,028"
+13,Thiruvananthapuram,8,20,6,YES,15,1023
+14,Palakkad,6,18,5,NO,13,1023
+15,Mysore,5,14,3,YES,11,"10,251,032"
+16,Jaipur,12,39,6,YES,16,"1,028,103,010,311,030"
