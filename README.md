@@ -1,2 +1,2 @@
 # mysql-project-fit
-A project on relational database management using MySQL.
+A mini-project on relational database management systems using MySQL.
